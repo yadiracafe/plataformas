@@ -4,8 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @font-face {
+            font-family: Lexend;
+            src: url(lexend.ttf);
+        }
+
+        body {
+            background-image: url("cafe.jpg");
+            height: 100vh; /* alto igual al viewport */
+            background-repeat: no-repeat;
+            background-size: auto 100vh; /* respeta el aspect ratio */
+            background-position: center center; /* control horizontal con variable */
+            font-family: Lexend;
+        }
+
+        h1 {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            text-shadow: 0px 5px 20px rgba(0,0,0,1);
+            color: black;
+        }
+
+        h2 {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            text-shadow: 0px 5px 20px rgba(255,255,255,1);
+            color: black;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #plataforma {
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.2); /* fondo semi-transparente */
+            backdrop-filter: blur(2px);         /* difumina lo de atrás */
+            -webkit-backdrop-filter: blur(10px); /* para Safari */
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            aspect-ratio: 1/1;
+            width: 100px;
+            height: 150px;
+            border-radius: 20px;
+            box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 0.3), 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        #plataforma > img {
+            width: 90px;
+            margin: 5px;
+            height: auto;
+        }
+
+        #plataforma > button {
+            border-radius: 10px;
+            border: none;
+            background: rgba(0, 0, 0, 0.4); /* fondo semi-transparente */
+            backdrop-filter: blur(4px);         /* difumina lo de atrás */
+            -webkit-backdrop-filter: blur(10px); /* para Safari */
+            box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 0.3), 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 10px;
+            font-family: Lexend;
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello World</h1>
+<body style="margin: 0; padding: 0;">
+    <h1>Café y Deli Yadira</h1>
+    <div id="container">
+        <div id="plataforma">
+            <img src="didi.png" alt="Didi">
+            <button onclick="window.location.href='https://didi-food.com/es-MX/food/store/5764608601784845754/Café---Deli-Yadira'">Pedir en Didi Food</button>
+        </div>
+        <div id="plataforma">
+            <img src="rappi.png" alt="Rappi">
+            <button onclick="window.location.href='https://www.rappi.com.mx/restaurantes/delivery/624483-abarrotes-yadira-cafe-tijuana'">Pedir en Rappi</button>
+        </div>
+        <div id="plataforma">
+            <img src="uber.png" alt="Uber">
+            <button onclick="window.location.href='https://www.ubereats.com/mx/store/cafe-%26-deli-yadira/rZ3eqgRlVluziJRuQQbd-A?diningMode=DELIVERY'">Pedir en Uber Eats</button>
+        </div>
+        <div id="plataforma">
+            <img src="maps.png" alt="Google Maps">
+            <button onclick="window.location.href='https://maps.app.goo.gl/Hqf4FEnMYUqRnqaV7'">Ir al café</button>
+        </div>
+    </div>
+    <h2>¡Ven a nuestra cafeteria o pide algo desde tu casa!</h2>
 </body>
 </html>
